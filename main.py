@@ -2,6 +2,7 @@ from scipy.integrate import quad
 import numpy as np
 
 radio = float(input("Escriba el valor del radio a: "))
+intervalos = int(input("Escriba el valor del numero de intervalos: "))
 
 def trapezoidal_integration(f, a, b, intervals):
     # Generate evenly spaced points between a and b
@@ -28,8 +29,9 @@ a = 0
 b = 2 * np.pi
 
 # Set the number of intervals
-intervals = 1000000
+intervals = intervalos
 
 # Calculate the definite integral using the trapezoidal rule
 result = trapezoidal_integration(my_function, a, b, intervals)
-print(f"The definite integral of x^2 from {a} to {b} using {intervals} intervals is approximately: {result}")
+# print(f"The definite integral of x^2 from {a} to {b} using {intervals} intervals is approximately: {result}")
+print(f"La longitud de arco de la traza es con radio {radio} y con {intervalos} intervalos es: {result} ")
